@@ -5,7 +5,7 @@ import { WalletName } from '../../../lib/wallet/Wallet';
 import { UniClient } from '../../../lib/wallet/UniClient';
 import { getBalance, getLatestBlock } from '../../utils/http';
 
-export const useTxDialog = defineStore('tx-dialog-widget', {
+export const useTxDialog = defineStore('ping-tx-dialog', {
   state: () => {
     return {
         // component variables
