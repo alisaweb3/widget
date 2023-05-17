@@ -1,5 +1,5 @@
 import './main.css';
-import { createApp, h } from 'vue';
+import { createApp, h, App } from 'vue';
 import packageJson from '../package.json';
 // @ts-ignore
 import wrapper from 'vue3-webcomponent-wrapper';
@@ -21,4 +21,11 @@ registry('ping-token-convert', TokenConvert);
 
 export default {
     version: packageJson?.version,
+    name: 'PingWidget',
+    install: (app: App) => {
+        app.component('pingvue-tx-dialog', TxDialog);
+        app.component('pingvue-connect-wallet', ConnectWallet);
+        app.component('pingvue-token-convert', TokenConvert);
+        return app;
+    },
 };
